@@ -1,10 +1,7 @@
 #lang racket
 
-;; (require math)
-
 (require ffi/unsafe)
 (require ffi/unsafe/define)
-(require rackunit)
 
 (require "./z3-racket.rkt")
 
@@ -38,8 +35,6 @@
 
 (define s (z3-mk-solver ctx))
 
-(z3-solver-inc-ref ctx s)
+(define proof (z3-solver-get-proof ctx s))
 
-(z3-solver-check ctx s)
-
-(z3-solver-to-string ctx s)
+(provide (all-defined-out))

@@ -3,7 +3,7 @@
 (require ffi/unsafe)
 (require ffi/unsafe/define)
 
-(require "./z3-racket.rkt")
+(require "z3-racket.rkt")
 
 (define cfg (z3-mk-config))
 (define ctx (z3-mk-context cfg))
